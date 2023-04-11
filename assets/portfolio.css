@@ -38,23 +38,86 @@ nav ul a:hover:after {
   }
 
 main {
-
+  margin: 60px 50px 0 50px;
+  display: flex
 }
 
 .featured {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 
 .projects {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+  justify-items: center;
+  margin-right: 50px;
 }
 
-.project {
-
+.featured img {
+  height: 500px;
+  width: 500px;
 }
 
-img {
+.projects img {
+  height: 200px;
+  width: 320px;
+}
+
+.featured h1 {
+  font-size: 30px;
+  padding-top: 25px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px 0 20px;
+}
+
+p {
+  position: relative;
+  padding: 15px 0 60px;
+  max-width: 500px
+}
+
+.project img {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.project img:hover {
+  border-color: black;
+}
+
+@media only screen and (max-width: 1240px) {
+  main {
+    flex-direction: column;
+  }
   
+  .featured, .projects {
+    width: 100%;
+  }
+  
+  .projects {
+    margin-right: 0;
+  }
 }
 
+@media screen and (max-width: 640px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+}

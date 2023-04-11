@@ -8,7 +8,7 @@ header {
     margin: 20px 0 20px 0;
 }
 
-nav li {
+header nav li {
     display: inline;
     padding: 50px;
 }
@@ -35,4 +35,26 @@ nav ul a:after {
   
 nav ul a:hover:after {
     opacity: 1;
+  }
+
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+main nav li {
+    padding: 30px;
+}
+
+@media screen and (max-width: 640px) {
+    header nav li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
   }

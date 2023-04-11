@@ -5,13 +5,21 @@ body {
 }
 
 main {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
-#homeImage {
-    margin-top: 60px;
-    border: solid 2px black
+img {
+    width: 488px;
+    height: auto;
+    border: solid 2px black;
+    max-width: 100%;
+}
+
+.homeImage {
+    margin: 60px 60px 0 60px;
 }
 
 h1 {
@@ -46,4 +54,14 @@ nav ul a:after {
   
 nav ul a:hover:after {
     opacity: 1;
+  }
+
+
+@media screen and (max-width: 640px) {
+    nav li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
   }
